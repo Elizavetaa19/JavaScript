@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myElement {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            transition: all 0.3s ease;
+        }
+        #toggleButton {
+            position: relative;
+            padding: 25px 30px; 
+            font-size:15px; 
+            cursor: pointer; 
+        }
+    </style>
+</head>
+<body>
+    <div id="myElement"></div>
+    <button id="toggleButton">Нажми</button>
+
+    <script>
+        const button = document.getElementById('toggleButton');
+        const element = document.getElementById('myElement');
+        let isToggled = false;
+
+        button.addEventListener('click', () => {
+            if (isToggled) {
+                // Возврат к прежним значениям
+                element.style.width = '200px';
+                element.style.height = '200px';
+                element.style.backgroundColor = "#15ee52";
+            } else {
+                // Изменение стилей
+                element.style.width = '300px';
+                element.style.height = '150px';
+                element.style.backgroundColor = "green";
+            }
+            isToggled = !isToggled; // Переключение состояния
+        });
+    </script>
+
+</body>
+</html>
