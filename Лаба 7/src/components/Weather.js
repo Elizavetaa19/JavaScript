@@ -1,4 +1,3 @@
-// src/components/Weather.js
 import React, { useState } from 'react';
 import axios from 'axios';
 import './Weather.css'; // Импортируем стили
